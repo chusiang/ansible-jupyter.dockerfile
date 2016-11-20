@@ -2,10 +2,18 @@
 
 A Docker image for run Ansible on Jupyter (ipython notebook).
 
-- Current version on Alpine 3.4:
+- `alpine-3.4`, `latest` ([alpine/Dockerfile
+](https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine/Dockerfile))
  - Ansible: **2.2.0.0**
  - Jupyter: **4.2.0**
  - Python: **2.7.12**
+ - pip: **9.0.1**
+
+- `ubuntu-14.04` ([ubuntu-14.04/Dockerfile
+](https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/ubuntu-14.04/Dockerfile))
+ - Ansible: **2.2.0.0**
+ - Jupyter: **4.2.0**
+ - Python: **2.7.6**
  - pip: **9.0.1**
 
 ## Build image

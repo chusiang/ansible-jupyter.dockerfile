@@ -18,7 +18,7 @@ RUN mkdir /etc/ansible && \
       /bin/echo -e "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
 
 # Setup with Ansible.
-COPY setup_jupyter.yml /home
+ADD https://raw.githubusercontent.com/chusiang/ansible-jupyter.dockerfile/master/setup_jupyter.yml /home
 RUN ansible-playbook -vvvv /home/setup_jupyter.yml
 
 # Copy a ipython notebook example to image.

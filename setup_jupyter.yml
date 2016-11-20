@@ -13,7 +13,6 @@
       - openssh-client
       - openssl
       - vim
-      - which
     
     pip_packages:
       - docker-py

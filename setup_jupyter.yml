@@ -4,7 +4,7 @@
 - hosts: localhost
 
   vars:
-    apk_packages:
+    os_packages:
       - bash
       - bash-completion
       - ca-certificates
@@ -23,10 +23,17 @@
   tasks:
     - name: install some apk packages
       apk: name={{ item }} state=latest
-      with_nested: "{{ apk_packages }}"
+      with_nested: "{{ os_packages }}"
       when:
-        - apk_packages is defined
+        - os_packages is defined
         - ansible_distribution == "Alpine"
+
+    - name: install some apt packages
+      apt: name={{ item }} state=latest
+      with_nested: "{{ os_packages }}"
+      when:
+        - os_packages is defined
+        - ansible_distribution == "Ubuntu"
 
     - name: install some pip packages
       pip: name={{ item }} state=latest

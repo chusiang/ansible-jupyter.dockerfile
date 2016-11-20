@@ -22,10 +22,10 @@ COPY setup_jupyter.yml /home
 RUN ansible-playbook -vvvv /home/setup_jupyter.yml
 
 # Copy a ipython notebook example to image.
-COPY files/ansible_on_jupyter.ipynb /home/
+ADD https://raw.githubusercontent.com/chusiang/ansible-jupyter.dockerfile/master/ipynb/ansible_on_jupyter.ipynb /home/
 
 # Run service of Jupyter.
-COPY files/docker-entrypoint.sh /usr/local/bin/
+COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT [ "docker-entrypoint.sh" ]
 EXPOSE 8888
 

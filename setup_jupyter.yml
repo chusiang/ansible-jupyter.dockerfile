@@ -1,0 +1,39 @@
+#!/usr/bin/env ansible-playbook
+---
+
+- hosts: localhost
+
+  vars:
+    apk_packages:
+      - bash
+      - bash-completion
+      - ca-certificates
+      - curl
+      - git
+      - ncurses
+      - openssh-client
+      - openssl
+      - vim
+      - which
+    
+    pip_packages:
+      - docker-py
+      - docker-compose
+    
+  tasks:
+    - name: install some apk packages
+      apk: name={{ item }} state=latest
+      with_nested: "{{ apk_packages }}"
+      when:
+        - apk_packages is defined
+        - ansible_distribution == "Alpine"
+
+    - name: install some pip packages
+      pip: name={{ item }} state=latest
+      with_nested: "{{ pip_packages }}"
+      when: pip_packages is defined
+
+    - name: install the jupyter
+      pip: name=jupyter version=1.0.0 state=present 
+
+# vim:ft=ansible :

@@ -25,15 +25,21 @@ A Docker image for run Ansible on Jupyter (ipython notebook).
 1. Bunild the image.
 
     ```
-    $ docker build -t ansible-jupyter .
+    $ docker build -t chusiang/ansible-jupyter .
     ```
 
 ## Run container
 
+1. Get image.
+    
+    ```
+    $ docker pull chusiang/ansible-jupyter
+    ```
+
 1. Run the container with daemon mode.
     
     ```
-    $ docker run --name ansible-jupyter -P -d ansible-jupyter
+    $ docker run --name ansible-jupyter -P -d chusiang/ansible-jupyter
     be8a15b9d4da5d24610c1fc738cb13086f01101e90f94640360d8d84892de772
     ```
 
@@ -42,7 +48,7 @@ A Docker image for run Ansible on Jupyter (ipython notebook).
     ```
     $ docker ps
     CONTAINER ID        IMAGE                      COMMAND                  CREATED             STATUS              PORTS                     NAMES
-    be8a15b9d4da        ansible-jupyter   "docker-entrypoint.sh"   12 seconds ago      Up 11 seconds       0.0.0.0:32808->8888/tcp   ansible-jupyter
+    be8a15b9d4da        chusiang/ansible-jupyter   "docker-entrypoint.sh"   12 seconds ago      Up 11 seconds       0.0.0.0:32808->8888/tcp   ansible-jupyter
     ```
 
 1. Enter container with command line.

@@ -4,6 +4,8 @@ A Docker image for run Ansible 2.2 on Jupyter 4.2 (ipython notebook).
 
 - `alpine-3.4`, `latest` ([alpine/Dockerfile
 ](https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine/Dockerfile))
+- `debian-8` ([debian-8/Dockerfile
+](https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/debian-8/Dockerfile))
 - `ubuntu-14.04` ([ubuntu-14.04/Dockerfile
 ](https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/ubuntu-14.04/Dockerfile))
 - `ubuntu-16.04` ([ubuntu-16.04/Dockerfile

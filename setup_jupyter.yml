@@ -26,14 +26,14 @@
       with_nested: "{{ os_packages }}"
       when:
         - os_packages is defined
-        - ansible_distribution == "Alpine"
+        - ansible_pkg_mgr == "apk"
 
     - name: install some apt packages
       apt: name={{ item }} state=latest
       with_nested: "{{ os_packages }}"
       when:
         - os_packages is defined
-        - ansible_distribution == "Ubuntu"
+        - ansible_pkg_mgr == "apt"
 
     - name: install some pip packages
       pip: name={{ item }} state=latest

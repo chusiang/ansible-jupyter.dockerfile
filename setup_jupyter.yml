@@ -10,11 +10,9 @@
       - ca-certificates
       - curl
       - git
-      - ncurses
       - openssh-client
       - openssl
       - vim
-      - which
     
     pip_packages:
       - docker-py

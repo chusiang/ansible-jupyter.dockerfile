@@ -4,34 +4,55 @@
 - hosts: localhost
 
   vars:
-    os_packages:
+    some_packages:
       - bash
       - bash-completion
       - ca-certificates
       - curl
       - git
-      - openssh-client
       - openssl
+
+    apk_packages: 
+      - openssh-client
       - vim
+
+    apt_packages: "{{ apk_packages }}"
+
+    yum_packages:
+      - openssh-clients
+      - vim-minimal
     
     pip_packages:
       - docker-py
       - docker-compose
     
   tasks:
-    - name: install some apk packages
-      apk: name={{ item }} state=latest
-      with_nested: "{{ os_packages }}"
+    - name: install some packages
+      package: name={{ item }} state=latest
+      with_nested: "{{ some_packages }}"
       when:
-        - os_packages is defined
+        - some_packages is defined
+
+    - name: install apk packages
+      apk: name={{ item }} state=latest
+      with_nested: "{{ apk_packages }}"
+      when:
+        - apk_packages is defined
         - ansible_pkg_mgr == "apk"
 
-    - name: install some apt packages
+    - name: install apt packages
       apt: name={{ item }} state=latest
-      with_nested: "{{ os_packages }}"
+      with_nested: "{{ apt_packages }}"
       when:
-        - os_packages is defined
+        - apt_packages is defined
         - ansible_pkg_mgr == "apt"
+
+    - name: install yum packages
+      yum: name={{ item }} state=latest
+      with_nested: "{{ yum_packages }}"
+      when:
+        - yum_packages is defined
+        - ansible_pkg_mgr == "yum"
 
     - name: install some pip packages
       pip: name={{ item }} state=latest

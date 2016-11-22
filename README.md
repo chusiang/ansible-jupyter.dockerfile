@@ -6,12 +6,14 @@ A Docker image for run [Ansible][ansible_offical] 2.2 on [Jupyter Notebook][jupy
 [jupyter_official]: http://jupyter.org/
 
 - `alpine-3.4`, `latest` ([alpine/Dockerfile][dockerfile_alpine])
+- `centos-7` ([centos-7/Dockerfile][dockerfile_centos-7])
 - `debian-7` ([debian-7/Dockerfile][dockerfile_debian-7])
 - `debian-8` ([debian-8/Dockerfile][dockerfile_debian-8])
 - `ubuntu-14.04` ([ubuntu-14.04/Dockerfile][dockerfile_ubuntu-14.04])
 - `ubuntu-16.04` ([ubuntu-16.04/Dockerfile][dockerfile_ubuntu-16.04])
 
 [dockerfile_alpine]:        https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine/Dockerfile
+[dockerfile_centos-7]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/centos-7/Dockerfile
 [dockerfile_debian-7]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/debian-7/Dockerfile
 [dockerfile_debian-8]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/debian-8/Dockerfile
 [dockerfile_ubuntu-14.04]:  https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/ubuntu-14.04/Dockerfile
@@ -96,4 +98,3 @@ Now, you can play the Ansible on Jupyter.
 1. Remember use the `!` prefix to trigger system command.
 
 Enjoy it !
-I

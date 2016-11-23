@@ -21,7 +21,11 @@
     yum_packages:
       - openssh-clients
       - vim-minimal
-    
+
+    zypper_packages:
+      - openssh
+      - vim
+
     pip_packages:
       - docker-py
       - docker-compose
@@ -54,12 +58,19 @@
         - yum_packages is defined
         - ansible_pkg_mgr == "yum"
 
-    - name: install some pip packages
+    - name: install zypper packages
+      zypper: name={{ item }} state=latest
+      with_nested: "{{ zypper_packages }}"
+      when:
+        - zypper_packages is defined
+        - ansible_pkg_mgr == "zypper"
+
+    - name: install pip packages
       pip: name={{ item }} state=latest
       with_nested: "{{ pip_packages }}"
       when: pip_packages is defined
 
-    - name: install the jupyter
+    - name: install the jupyter notebook
       pip: name=jupyter version=1.0.0 state=present 
 
 # vim:ft=ansible :

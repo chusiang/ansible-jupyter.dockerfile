@@ -2,9 +2,11 @@ FROM centos:7
 
 MAINTAINER Chu-Siang Lai <chusiang@drx.tw>
 
-# Install the requires yum package and python.
+# Upgrade and add third-party repository.
 RUN yum update -y && \
       yum install -y epel-release
+
+# Install the requires yum package and python.
 RUN yum install -y \
       kernel-headers gcc python python-pip python-devel \
       libffi-devel openssl-devel \

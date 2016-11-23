@@ -2,9 +2,13 @@ FROM opensuse:42.1
 
 MAINTAINER Chu-Siang Lai <chusiang@drx.tw>
 
-# Install the requires package and python.
+# Add third-party repository.
 RUN zypper addrepo -Gf http://download.opensuse.org/repositories/systemsmanagement/openSUSE_Leap_42.1/ systemsmanagement
+
+# Upgrade.
 RUN zypper update -y
+#
+# Install the requires package and python.
 RUN zypper install -y \
       kernel-devel gcc python python-pip python-devel \
       libffi-devel-gcc5 libopenssl-devel libzmq5 \

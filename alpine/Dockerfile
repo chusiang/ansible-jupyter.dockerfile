@@ -2,8 +2,10 @@ FROM alpine:3.4
 
 MAINTAINER Chu-Siang Lai <chusiang@drx.tw>
 
-# Install the requires apk package and python.
+# Update the index of available packages.
 RUN apk update
+
+# Install the requires apk package and python.
 RUN apk add --no-cache linux-headers gcc build-base python py-pip python-dev \
         libffi-dev openssl-dev
 

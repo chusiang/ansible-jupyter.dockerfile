@@ -2,9 +2,10 @@ FROM ubuntu:14.04
 
 MAINTAINER Chu-Siang Lai <chusiang@drx.tw>
 
-# Install the requires apt package and python.
+# Update the index of available packages.
 RUN apt-get update
 
+# Install the requires apt package and python.
 RUN apt-get install -y --no-install-recommends \
       linux-headers-generic gcc build-essential python python-pip python-dev \
       libffi-dev \

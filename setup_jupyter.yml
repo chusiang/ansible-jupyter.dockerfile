@@ -4,6 +4,7 @@
 - hosts: localhost
 
   vars:
+    # Linux.
     some_packages:
       - bash
       - bash-completion
@@ -12,31 +13,41 @@
       - git
       - openssl
 
+    # Alpine.
     apk_packages: 
       - openssh-client
       - vim
 
+    # Debian, Ubuntu.
     apt_packages: "{{ apk_packages }}"
 
+    # Arch Linux.
+    pacman_packages:
+      - openssh
+      - vim
+
+    # CentOS.
     yum_packages:
       - openssh-clients
       - vim-minimal
 
-    zypper_packages:
-      - openssh
-      - vim
+    # openSUSE
+    zypper_packages: "{{ pacman_packages }}"
 
+    # Python.
     pip_packages:
       - docker-py
       - docker-compose
     
   tasks:
+    # General Linux.
     - name: install some packages
       package: name={{ item }} state=latest
       with_nested: "{{ some_packages }}"
       when:
         - some_packages is defined
 
+    # Alpine.
     - name: install apk packages
       apk: name={{ item }} state=latest
       with_nested: "{{ apk_packages }}"
@@ -44,6 +55,7 @@
         - apk_packages is defined
         - ansible_pkg_mgr == "apk"
 
+    # Debian, Ubuntu.
     - name: install apt packages
       apt: name={{ item }} state=latest
       with_nested: "{{ apt_packages }}"
@@ -51,6 +63,15 @@
         - apt_packages is defined
         - ansible_pkg_mgr == "apt"
 
+    # Arch Linux.
+    - name: install pacman packages
+      pacman: name={{ item }} state=latest
+      with_nested: "{{ pacman_packages }}"
+      when:
+        - pacman_packages is defined
+        - ansible_pkg_mgr == "pacman"
+
+    # CentOS.
     - name: install yum packages
       yum: name={{ item }} state=latest
       with_nested: "{{ yum_packages }}"
@@ -58,6 +79,7 @@
         - yum_packages is defined
         - ansible_pkg_mgr == "yum"
 
+    # openSUSE
     - name: install zypper packages
       zypper: name={{ item }} state=latest
       with_nested: "{{ zypper_packages }}"
@@ -65,11 +87,13 @@
         - zypper_packages is defined
         - ansible_pkg_mgr == "zypper"
 
-    - name: install pip packages
+    # General Python packages.
+    - name: install some pip packages
       pip: name={{ item }} state=latest
       with_nested: "{{ pip_packages }}"
       when: pip_packages is defined
 
+    # Only install Jupyter.
     - name: install the jupyter notebook
       pip: name=jupyter version=1.0.0 state=present 
 

@@ -1,26 +1,25 @@
-FROM debian:8
+FROM finalduty/archlinux:daily
 
 MAINTAINER Chu-Siang Lai <chusiang@drx.tw>
 
-# Update the index of available packages.
-RUN apt-get update
+# Upgrade the currently installed packages.
+RUN pacman -Syu
 
-# Install the requires apt package and python.
-RUN apt-get install -y --no-install-recommends \
-      linux-headers-amd64 gcc build-essential python python-pip python-dev \
-      libffi-dev libssl-dev \
+# Install the requires package and python.
+RUN pacman -S --noconfirm linux-headers gcc python python-pip base-devel \
+      libffi openssl \
       && \
-      apt-get clean
+      pacman -Scc --noconfirm
 
 # Upgrade the pip to lastest.
 RUN pip install -U pip
 
 # Setup the ansible.
-RUN pip install ansible
+RUN pacman -S --noconfirm ansible && \
+      pacman -Scc --noconfirm
 
 # for disable localhost warning message.
-RUN mkdir /etc/ansible && \
-      /bin/echo -e "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
+RUN /bin/echo -e "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
 
 # Setup with Ansible.
 ADD https://raw.githubusercontent.com/chusiang/ansible-jupyter.dockerfile/master/setup_jupyter.yml /home

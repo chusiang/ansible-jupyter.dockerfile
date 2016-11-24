@@ -12,5 +12,4 @@
 #
 # =========================================================== 
 
-#jupyter-notebook --ip 0.0.0.0 --no-browser --notebook-dir=/home
 /opt/anaconda2/bin/jupyter-notebook --ip 0.0.0.0 --no-browser --notebook-dir=/home

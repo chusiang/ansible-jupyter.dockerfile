@@ -95,10 +95,9 @@ Now, you can play the Ansible on Jupyter.
 
 1. Attach my example ==> [`ansible_on_jupyter.ipynb`][ansible_on_jupyter.ipynb].
 
-[ansible_on_jupyter.ipynb]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/ipynb/ansible_on_jupyter.ipynb
-
     ![2016-11-20-ansible-jupyter2]
 
+[ansible_on_jupyter.ipynb]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/ipynb/ansible_on_jupyter.ipynb
 [2016-11-20-ansible-jupyter2]: https://cloud.githubusercontent.com/assets/219066/20463319/fa8c047c-af6a-11e6-96d6-f985096c9c8c.png
 
 1. Remember use the `!` prefix to trigger system command.

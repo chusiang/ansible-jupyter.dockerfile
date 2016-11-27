@@ -4,17 +4,18 @@
 - hosts: localhost
 
   vars:
-    # Linux.
-    some_packages:
+    # Same package on GNU/Linux.
+    same_packages:
       - bash
       - bash-completion
       - ca-certificates
       - curl
-      - git
       - openssl
 
-    # Alpine.
+    # Alpine Linux.
     apk_packages: 
+      - curl
+      - git
       - openssh-client
       - vim
 
@@ -23,11 +24,22 @@
 
     # Arch Linux.
     pacman_packages:
+      - curl
+      - git
       - openssh
       - vim
 
+    # Gentoo Linux.
+    portage_packages:
+      - net-misc/curl
+      - dev-vcs/git
+      - openssh
+      - vim
+      
     # CentOS.
     yum_packages:
+      - curl
+      - git
       - openssh-clients
       - vim-minimal
 
@@ -41,16 +53,16 @@
     
   tasks:
     # General Linux.
-    - name: install some packages
+    - name: install same packages
       package: name={{ item }} state=latest
-      with_nested: "{{ some_packages }}"
+      with_items: "{{ same_packages }}"
       when:
-        - some_packages is defined
+        - same_packages is defined
 
-    # Alpine.
+    # Alpine Linux.
     - name: install apk packages
       apk: name={{ item }} state=latest
-      with_nested: "{{ apk_packages }}"
+      with_items: "{{ apk_packages }}"
       when:
         - apk_packages is defined
         - ansible_pkg_mgr == "apk"
@@ -58,7 +70,7 @@
     # Debian, Ubuntu.
     - name: install apt packages
       apt: name={{ item }} state=latest
-      with_nested: "{{ apt_packages }}"
+      with_items: "{{ apt_packages }}"
       when:
         - apt_packages is defined
         - ansible_pkg_mgr == "apt"
@@ -66,15 +78,24 @@
     # Arch Linux.
     - name: install pacman packages
       pacman: name={{ item }} state=latest
-      with_nested: "{{ pacman_packages }}"
+      with_items: "{{ pacman_packages }}"
       when:
         - pacman_packages is defined
         - ansible_pkg_mgr == "pacman"
 
+    # Gentoo Linux.
+    - name: install portage packages
+      portage: package={{ item }} state=present
+      with_items:
+       - "{{ portage_packages }}"
+      when:
+        - portage_packages is defined
+        - ansible_pkg_mgr == "portage"
+
     # CentOS.
     - name: install yum packages
       yum: name={{ item }} state=latest
-      with_nested: "{{ yum_packages }}"
+      with_items: "{{ yum_packages }}"
       when:
         - yum_packages is defined
         - ansible_pkg_mgr == "yum"
@@ -82,7 +103,7 @@
     # openSUSE
     - name: install zypper packages
       zypper: name={{ item }} state=latest
-      with_nested: "{{ zypper_packages }}"
+      with_items: "{{ zypper_packages }}"
       when:
         - zypper_packages is defined
         - ansible_pkg_mgr == "zypper"
@@ -90,7 +111,7 @@
     # General Python packages.
     - name: install some pip packages
       pip: name={{ item }} state=latest
-      with_nested: "{{ pip_packages }}"
+      with_items: "{{ pip_packages }}"
       when: pip_packages is defined
 
     # Only install Jupyter.

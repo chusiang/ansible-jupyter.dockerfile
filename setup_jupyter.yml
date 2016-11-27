@@ -31,6 +31,7 @@
       - net-misc/curl
       - dev-vcs/git
       - openssh
+      - sqlite
       - vim
       
     # CentOS.
@@ -49,7 +50,7 @@
   tasks:
     # General Linux.
     - name: install same packages
-      package: name={{ item }} state=latest
+      package: name={{ item }} state=present
       with_items: "{{ same_packages }}"
       when:
         - same_packages is defined
@@ -57,7 +58,7 @@
 
     # Alpine Linux.
     - name: install apk packages
-      apk: name={{ item }} state=latest
+      apk: name={{ item }} state=present
       with_items: "{{ apk_packages }}"
       when:
         - apk_packages is defined
@@ -65,7 +66,7 @@
 
     # Debian, Ubuntu.
     - name: install apt packages
-      apt: name={{ item }} state=latest
+      apt: name={{ item }} state=present
       with_items: "{{ apt_packages }}"
       when:
         - apt_packages is defined
@@ -73,7 +74,7 @@
 
     # Arch Linux.
     - name: install pacman packages
-      pacman: name={{ item }} state=latest
+      pacman: name={{ item }} state=present
       with_items: "{{ pacman_packages }}"
       when:
         - pacman_packages is defined
@@ -90,7 +91,7 @@
 
     # CentOS.
     - name: install yum packages
-      yum: name={{ item }} state=latest
+      yum: name={{ item }} state=present
       with_items: "{{ yum_packages }}"
       when:
         - yum_packages is defined
@@ -98,7 +99,7 @@
 
     # openSUSE
     - name: install zypper packages
-      zypper: name={{ item }} state=latest
+      zypper: name={{ item }} state=present
       with_items: "{{ zypper_packages }}"
       when:
         - zypper_packages is defined
@@ -106,9 +107,15 @@
 
     # General Python packages.
     - name: install some pip packages
-      pip: name={{ item }} state=latest
+      pip: name={{ item }} state=present
       with_items: "{{ pip_packages }}"
       when: pip_packages is defined
+
+    # Only install pysqlite
+    - name: install the pysqlite for gentoo
+      pip: name=pysqlite state=present
+      when:
+        - ansible_pkg_mgr == "portage"
 
     # Only install Jupyter.
     - name: install the jupyter notebook

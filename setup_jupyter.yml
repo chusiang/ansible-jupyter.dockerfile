@@ -28,9 +28,13 @@
 
     # Gentoo Linux.
     portage_packages:
-      - net-misc/curl
+      - bash
+      - bash-completion
+      - ca-certificates
       - dev-vcs/git
+      - net-misc/curl
       - openssh
+      - openssl
       - sqlite
       - vim
       

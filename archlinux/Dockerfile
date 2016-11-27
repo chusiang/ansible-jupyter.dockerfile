@@ -3,7 +3,7 @@ FROM finalduty/archlinux:daily
 MAINTAINER Chu-Siang Lai <chusiang@drx.tw>
 
 # Upgrade the currently installed packages.
-RUN pacman -Syu
+RUN pacman -Syu --noconfirm
 
 # Install the requires package and python.
 RUN pacman -S --noconfirm linux-headers gcc python python-pip base-devel \

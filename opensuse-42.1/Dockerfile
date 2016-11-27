@@ -7,16 +7,17 @@ RUN zypper addrepo -Gf http://download.opensuse.org/repositories/systemsmanageme
 
 # Upgrade.
 RUN zypper update -y
-#
+
 # Install the requires package and python.
-RUN zypper install -y \
+RUN zypper -n install \
       kernel-devel gcc python python-pip python-devel \
       libffi-devel-gcc5 libopenssl-devel libzmq5 \
       && \
       zypper clean -a
 
 # Install the Ansible 2.0+
-RUN zypper install -y ansible-2.2.0.0-56.1
+RUN zypper -n install ansible && \
+      zypper clean -a
 
 # for disable localhost warning message.
 RUN /bin/echo -e "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts

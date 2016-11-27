@@ -10,12 +10,11 @@
       - bash-completion
       - ca-certificates
       - curl
+      - git
       - openssl
 
     # Alpine Linux.
     apk_packages: 
-      - curl
-      - git
       - openssh-client
       - vim
 
@@ -24,8 +23,6 @@
 
     # Arch Linux.
     pacman_packages:
-      - curl
-      - git
       - openssh
       - vim
 
@@ -38,8 +35,6 @@
       
     # CentOS.
     yum_packages:
-      - curl
-      - git
       - openssh-clients
       - vim-minimal
 
@@ -58,6 +53,7 @@
       with_items: "{{ same_packages }}"
       when:
         - same_packages is defined
+        - ansible_pkg_mgr != "portage"
 
     # Alpine Linux.
     - name: install apk packages

@@ -12,6 +12,7 @@ A Docker image for run [Ansible][ansible_offical] 2.2 on [Jupyter Notebook][jupy
 - `centos-7` [*(centos-7/Dockerfile)*][dockerfile_centos-7]
 - `debian-7` [*(debian-7/Dockerfile)*][dockerfile_debian-7]
 - `debian-8` [*(debian-8/Dockerfile)*][dockerfile_debian-8]
+- `gentoo` [*(gentoo/Dockerfile)*][dockerfile_gentoo]
 - `opensuse-42.1` [*(opensuse-42.1/Dockerfile)*][dockerfile_opensuse-42.1]
 - `ubuntu-14.04` [*(ubuntu-14.04/Dockerfile)*][dockerfile_ubuntu-14.04]
 - `ubuntu-16.04` [*(ubuntu-16.04/Dockerfile)*][dockerfile_ubuntu-16.04]
@@ -21,6 +22,7 @@ A Docker image for run [Ansible][ansible_offical] 2.2 on [Jupyter Notebook][jupy
 [dockerfile_centos-7]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/centos-7/Dockerfile
 [dockerfile_debian-7]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/debian-7/Dockerfile
 [dockerfile_debian-8]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/debian-8/Dockerfile
+[dockerfile_gentoo]:        https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/gentoo/Dockerfile
 [dockerfile_opensuse-42.1]:  https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/opensuse-42.1/Dockerfile
 [dockerfile_ubuntu-14.04]:  https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/ubuntu-14.04/Dockerfile
 [dockerfile_ubuntu-16.04]:  https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/ubuntu-16.04/Dockerfile

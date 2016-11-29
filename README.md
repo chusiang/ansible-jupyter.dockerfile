@@ -1,8 +1,8 @@
 # Docker image: Ansible on Jupyter Notebook
 
-A Docker image for run [Ansible][ansible_offical] 2.2 on [Jupyter Notebook][jupyter_official] 4.2 (ipython notebook) with Browsers.
+A Docker image for run [Ansible][ansible_official] 2.2 on [Jupyter Notebook][jupyter_official] 4.2 (ipython notebook) with Browsers.
 
-[ansible_offical]:  https://www.ansible.com/
+[ansible_official]:  https://www.ansible.com/
 [jupyter_official]: http://jupyter.org/
 
 ## Supported tags and respective `Dockerfile` links
@@ -105,3 +105,7 @@ Now, you can play the Ansible on Jupyter.
 1. Remember use the `!` prefix to trigger system command.
 
 Enjoy it !
+
+## License
+
+Copyright (c) chusiang from 2016 under the MIT license.

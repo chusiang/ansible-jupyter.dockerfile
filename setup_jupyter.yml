@@ -14,7 +14,7 @@
       - openssl
 
     # Alpine Linux.
-    apk_packages: 
+    apk_packages:
       - openssh-client
       - vim
 
@@ -37,7 +37,7 @@
       - openssl
       - sqlite
       - vim
-      
+
     # CentOS.
     yum_packages:
       - openssh-clients
@@ -54,7 +54,7 @@
     ssh_private_key_url: "https://raw.githubusercontent.com/chusiang/ansible-jupyter.dockerfile/master/files/ssh/id_rsa"
     ansible_cfg_url: "https://raw.githubusercontent.com/chusiang/ansible-jupyter.dockerfile/master/ansible.cfg"
     inventory_url: "https://raw.githubusercontent.com/chusiang/ansible-jupyter.dockerfile/master/inventory"
-    
+
   tasks:
     # General Linux.
     - name: install same packages
@@ -127,14 +127,14 @@
 
     # Only install Jupyter.
     - name: install the jupyter notebook
-      pip: name=jupyter version=1.0.0 state=present 
+      pip: name=jupyter version=1.0.0 state=present
 
     # Create `ssh_config` directory.
     - name: create `/root/.ssh` directory
       file: path=/root/.ssh state=directory mode=0700
 
     # Get the ssh private key.
-    - name: get the ssh private key 
+    - name: get the ssh private key
       get_url: >
         url={{ ssh_private_key_url }} dest=/root/.ssh/id_rsa mode=0600
         checksum=md5:6cc26e77bf23a9d72a51b22387bea61f

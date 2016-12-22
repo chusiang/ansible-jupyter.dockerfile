@@ -1,5 +1,8 @@
 # Docker image: Ansible on Jupyter Notebook
 
+[![Docker Hub](https://img.shields.io/badge/docker-ansible--jupyter-blue.svg)](https://hub.docker.com/r/chusiang/ansible-jupyter/)
+[![](https://images.microbadger.com/badges/image/chusiang/ansible-jupyter.svg)](https://microbadger.com/images/chusiang/ansible-jupyter "Get your own image badge on microbadger.com")
+
 A Docker image for run [Ansible][ansible_official] 2.2 on [Jupyter Notebook][jupyter_official] 4.2 (ipython notebook) with Browsers.
 
 [ansible_official]:  https://www.ansible.com/

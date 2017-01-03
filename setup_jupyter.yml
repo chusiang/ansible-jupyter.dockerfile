@@ -51,6 +51,7 @@
       - docker-py
       - docker-compose
 
+    jupyter_notebook_config_py_url: "https://raw.githubusercontent.com/chusiang/ansible-jupyter.dockerfile/master/files/jupyter_notebook_config.py"
     ssh_private_key_url: "https://raw.githubusercontent.com/chusiang/ansible-jupyter.dockerfile/master/files/ssh/id_rsa"
     ansible_cfg_url: "https://raw.githubusercontent.com/chusiang/ansible-jupyter.dockerfile/master/ansible.cfg"
     inventory_url: "https://raw.githubusercontent.com/chusiang/ansible-jupyter.dockerfile/master/inventory"
@@ -128,6 +129,15 @@
     # Only install Jupyter.
     - name: install the jupyter notebook
       pip: name=jupyter version=1.0.0 state=present
+
+    # Disable Jupyter authentication of token.
+    - name: create `/root/.jupyter` directory
+      file: path=/root/.jupyter state=directory mode=0700
+
+    - name: get the jupyter_notebook_config.py
+      get_url: >
+        url={{ jupyter_notebook_config_py_url }} dest=/root/.jupyter/jupyter_notebook_config.py mode=0644
+        checksum=md5:c663914a24281ddf10df6bc9e7238b07
 
     # Create `ssh_config` directory.
     - name: create `/root/.ssh` directory

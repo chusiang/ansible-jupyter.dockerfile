@@ -126,7 +126,10 @@
       when:
         - ansible_pkg_mgr == "portage"
 
-    # Only install Jupyter.
+    # install Jupyter.
+    - name: upgrade the six
+      pip: name=six state=latest
+
     - name: install the jupyter notebook
       pip: name=jupyter version=1.0.0 state=present
 

@@ -12,4 +12,4 @@
 #
 # =========================================================== 
 
-jupyter-notebook --ip 0.0.0.0 --no-browser --notebook-dir=/home
+jupyter-notebook --ip 0.0.0.0 --no-browser --allow-root --notebook-dir=/home

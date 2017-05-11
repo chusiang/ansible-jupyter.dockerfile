@@ -2,7 +2,7 @@
 
 [![Docker Hub](https://img.shields.io/badge/docker-ansible--jupyter-blue.svg)](https://hub.docker.com/r/chusiang/ansible-jupyter/) [![microbadger](https://images.microbadger.com/badges/image/chusiang/ansible-jupyter.svg)](https://microbadger.com/images/chusiang/ansible-jupyter "Get your own image badge on microbadger.com")
 
-A Docker image for run [Ansible][ansible_official] 2.2 on [Jupyter Notebook][jupyter_official] 4.2 (ipython notebook) with Browsers.
+A Docker image for run [Ansible][ansible_official] 2.3 on [Jupyter Notebook][jupyter_official] 4.3 (ipython notebook) with Browsers.
 
 [ansible_official]:  https://www.ansible.com/
 [jupyter_official]: http://jupyter.org/
@@ -110,4 +110,4 @@ Enjoy it !
 
 ## License
 
-Copyright (c) chusiang from 2016 under the MIT license.
+Copyright (c) chusiang from 2016-2017 under the MIT license.

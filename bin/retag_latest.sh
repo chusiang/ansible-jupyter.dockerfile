@@ -1,15 +1,18 @@
 #!/bin/bash
 
+DOCKER_IMAGE="chusiang/ansible-jupyter"
+DOCKER_TAG="alpine-3.6"
+
 echo 'Pull alpine image.'
-docker pull chusiang/ansible-jupyter:alpine-3.4
+docker pull $DOCKER_IMAGE:$DOCKER_TAG
 echo
 
 echo 'Tag alpine image to latest.'
-docker tag  chusiang/ansible-jupyter:alpine-3.4 chusiang/ansible-jupyter:latest
+docker tag $DOCKER_IMAGE:$DOCKER_TAG $DOCKER_IMAGE:latest
 echo
 
 echo 'Push the latest tag.'
-docker push chusiang/ansible-jupyter:latest
+docker push $DOCKER_IMAGE:latest
 echo
 
 echo 'Remove old image.'

@@ -7,7 +7,7 @@ RUN apk update
 
 # Install the requires apk package and python.
 RUN apk add --no-cache linux-headers gcc build-base python py-pip python-dev \
-        libffi-dev openssl-dev
+        libffi-dev openssl-dev ca-certificates
 
 # Upgrade the pip to lastest.
 RUN pip install -U pip

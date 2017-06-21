@@ -11,11 +11,8 @@ RUN emerge python:2.7 dev-python/pip gentoolkit
 # switch python to v2.7.
 RUn eselect python set 1
 
-# Upgrade the pip to lastest.
-RUN pip install -U pip
-
 # Setup the ansible.
-RUN pip install ansible
+RUN emerge ansible
 
 # for disable localhost warning message.
 RUN mkdir /etc/ansible && \

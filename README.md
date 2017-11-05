@@ -10,6 +10,7 @@ A Docker image for run [Ansible][ansible_official] 2.4.1 on [Jupyter Notebook][j
 ## Supported tags and respective `Dockerfile` links
 
 - `alpine-3.4` [*(alpine-3.4/Dockerfile)*][dockerfile_alpine-3.4]
+- `alpine-3.4_ansible-2.1` [*(alpine-3.4_ansible-2.1/Dockerfile)*][dockerfile_alpine-3.4_ansible-2.1]
 - `alpine-3.6`, `latest` [*(alpine-3.6/Dockerfile)*][dockerfile_alpine-3.6]
 - `alpine-3.6_ansible-2.3` [*(alpine-3.6_ansible-2.3/Dockerfile)*][dockerfile_alpine-3.6_ansible-2.3]
 - `archlinux` [*(archlinux/Dockerfile)*][dockerfile_archlinux]
@@ -25,6 +26,7 @@ A Docker image for run [Ansible][ansible_official] 2.4.1 on [Jupyter Notebook][j
 - `ubuntu-16.04` [*(ubuntu-16.04/Dockerfile)*][dockerfile_ubuntu-16.04]
 
 [dockerfile_alpine-3.4]:    https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.4/Dockerfile
+[dockerfile_alpine-3.4_ansible-2.1]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.4_ansible-2.1/Dockerfile
 [dockerfile_alpine-3.6]:    https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.6/Dockerfile
 [dockerfile_alpine-3.6_ansible-2.3]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.6_ansible-2.3/Dockerfile
 [dockerfile_archlinux]:     https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/archlinux/Dockerfile

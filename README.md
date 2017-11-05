@@ -114,6 +114,8 @@ Now, you can play the Ansible on Jupyter.
 
 1. Remember use the `!` prefix to trigger system command.
 
+You can see more detail at [怎麼用 Jupyter 操控 Ansible？(localhost) | 現代 IT 人一定要知道的 Ansible 自動化組態技巧](https://chusiang.gitbooks.io/automate-with-ansible/07.how-to-practive-the-ansible-with-jupyter1.html) .
+
 Enjoy it !
 
 ## License

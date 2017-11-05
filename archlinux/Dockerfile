@@ -27,6 +27,7 @@ RUN ansible-playbook -vvvv /home/setup_jupyter.yml
 
 # Copy a ipython notebook example to image.
 ADD https://raw.githubusercontent.com/chusiang/ansible-jupyter.dockerfile/master/ipynb/ansible_on_jupyter.ipynb /home/
+ADD https://raw.githubusercontent.com/chusiang/ansible-jupyter.dockerfile/master/ipynb/ansible_on_jupyter_archlinux.ipynb /home/
 
 # Run service of Jupyter.
 COPY docker-entrypoint.sh /usr/local/bin/

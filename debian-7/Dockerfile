@@ -13,7 +13,8 @@ RUN apt-get install -y --no-install-recommends \
       apt-get clean
 
 # Upgrade the pip to lastest.
-RUN pip install -U pip
+RUN pip install -i https://pypi.python.org/simple/ -U pip && \
+      ln -fs /usr/local/bin/pip /usr/bin/pip
 
 # Setup the ansible.
 RUN pip install ansible

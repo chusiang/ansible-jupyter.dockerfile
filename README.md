@@ -2,7 +2,7 @@
 
 [![Docker Hub](https://img.shields.io/badge/docker-ansible--jupyter-blue.svg)](https://hub.docker.com/r/chusiang/ansible-jupyter/) [![microbadger](https://images.microbadger.com/badges/image/chusiang/ansible-jupyter.svg)](https://microbadger.com/images/chusiang/ansible-jupyter "Get your own image badge on microbadger.com")
 
-A Docker image for run [Ansible][ansible_official] 2.3 on [Jupyter Notebook][jupyter_official] 4.3 (ipython notebook) with Browsers.
+A Docker image for run [Ansible][ansible_official] 2.4.1 on [Jupyter Notebook][jupyter_official] 4.4.0 (ipython notebook) with Browsers.
 
 [ansible_official]:  https://www.ansible.com/
 [jupyter_official]: http://jupyter.org/
@@ -15,6 +15,7 @@ A Docker image for run [Ansible][ansible_official] 2.3 on [Jupyter Notebook][jup
 - `centos-7` [*(centos-7/Dockerfile)*][dockerfile_centos-7]
 - `debian-7` [*(debian-7/Dockerfile)*][dockerfile_debian-7]
 - `debian-8` [*(debian-8/Dockerfile)*][dockerfile_debian-8]
+- `debian-9` [*(debian-9/Dockerfile)*][dockerfile_debian-9]
 - ~~`gentoo`~~ [*(gentoo/Dockerfile)*][dockerfile_gentoo]
 - ~~`opensuse-42.1`~~ [*(opensuse-42.1/Dockerfile)*][dockerfile_opensuse-42.1]
 - `opensuse-42.2` [*(opensuse-42.2/Dockerfile)*][dockerfile_opensuse-42.2]
@@ -28,6 +29,7 @@ A Docker image for run [Ansible][ansible_official] 2.3 on [Jupyter Notebook][jup
 [dockerfile_centos-7]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/centos-7/Dockerfile
 [dockerfile_debian-7]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/debian-7/Dockerfile
 [dockerfile_debian-8]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/debian-8/Dockerfile
+[dockerfile_debian-9]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/debian-9/Dockerfile
 [dockerfile_gentoo]:        https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/gentoo/Dockerfile
 [dockerfile_opensuse-42.1]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/opensuse-42.1/Dockerfile
 [dockerfile_opensuse-42.2]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/opensuse-42.2/Dockerfile
@@ -46,7 +48,7 @@ A Docker image for run [Ansible][ansible_official] 2.3 on [Jupyter Notebook][jup
 1. Go to workspace.
 
     ```
-    $ cd ansible-jupyter.dockerfile/
+    $ cd ansible-jupyter.dockerfile/<IMAGE_TAG>/
     ```
 
 1. Bunild the image.

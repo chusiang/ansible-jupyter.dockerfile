@@ -1,1 +1,61 @@
-#debian-8.local  ansible_ssh_host=192.168.1.102  ansible_ssh_port=32788
+# ============================================================
+#  Author: Chu-Siang Lai / chusiang (at) drx.tw
+#  Blog: http://note.drx.tw
+#  Filename: inventory
+#  Modified: 2017-11-10 00:13
+#  Description: The managed nodes list for Ansible.
+#
+#   Syntax:
+#
+#     <servername>  <options>
+#     debian-8      ansible_ssh_host=192.168.1.109  ansible_ssh_port=32788
+#
+#   Common Option:
+#
+#     `ansible_ssh_host`: Remote host IP.
+#     `ansible_ssh_user`: Remote ssh username.
+#     `ansible_ssh_private_key_file`: ssh private key path.
+#     `ansible_ssh_port`: ssh port.
+#     `ansible_ssh_pass`: ssh password. (Not recommended)
+#
+#  Reference: http://docs.ansible.com/ansible/latest/intro_inventory.html
+# ============================================================
+
+# Host & Group
+##############
+
+[alpine]
+#alpine-3.4     ansible_ssh_host=192.168.1.109  ansible_ssh_port=32781
+#alpine-3.6     ansible_ssh_host=192.168.1.109  ansible_ssh_port=32782
+
+[archlinux]
+#archlinux      ansible_ssh_host=192.168.1.109  ansible_ssh_port=32783
+
+[centos]
+#centos-7       ansible_ssh_host=192.168.1.109  ansible_ssh_port=32784
+
+[debian]
+#debian-7       ansible_ssh_host=192.168.1.109  ansible_ssh_port=32785
+#debian-8       ansible_ssh_host=192.168.1.109  ansible_ssh_port=32786
+#debian-9       ansible_ssh_host=192.168.1.109  ansible_ssh_port=32787
+
+[opensuse]
+#opensuse-42.2  ansible_ssh_host=192.168.1.109  ansible_ssh_port=32788
+#opensuse-42.3  ansible_ssh_host=192.168.1.109  ansible_ssh_port=32789
+
+[ubuntu]
+#ubuntu-14.04   ansible_ssh_host=192.168.1.109  ansible_ssh_port=32790
+#ubuntu-16.04   ansible_ssh_host=192.168.1.109  ansible_ssh_port=32791
+
+# Group of Group
+################
+
+[test:children]
+alpine
+archlinux
+centos
+debian
+opensuse
+ubuntu
+
+# vim: ft=ansible :

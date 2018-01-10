@@ -14,6 +14,7 @@ A Docker image for run [Ansible][ansible_official] 2.4.1 on [Jupyter Notebook][j
 - `alpine-3.6`, `latest` [*(alpine-3.6/Dockerfile)*][dockerfile_alpine-3.6]
 - `alpine-3.6_ansible-2.3` [*(alpine-3.6_ansible-2.3/Dockerfile)*][dockerfile_alpine-3.6_ansible-2.3]
 - `archlinux` [*(archlinux/Dockerfile)*][dockerfile_archlinux]
+- ~~`centos-6`~~ [*(centos-6/Dockerfile)*][dockerfile_centos-6]
 - `centos-7` [*(centos-7/Dockerfile)*][dockerfile_centos-7]
 - ~~`debian-7`~~ [*(debian-7/Dockerfile)*][dockerfile_debian-7]
 - `debian-8` [*(debian-8/Dockerfile)*][dockerfile_debian-8]
@@ -30,6 +31,7 @@ A Docker image for run [Ansible][ansible_official] 2.4.1 on [Jupyter Notebook][j
 [dockerfile_alpine-3.6]:    https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.6/Dockerfile
 [dockerfile_alpine-3.6_ansible-2.3]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.6_ansible-2.3/Dockerfile
 [dockerfile_archlinux]:     https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/archlinux/Dockerfile
+[dockerfile_centos-6]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/centos-6/Dockerfile
 [dockerfile_centos-7]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/centos-7/Dockerfile
 [dockerfile_debian-7]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/debian-7/Dockerfile
 [dockerfile_debian-8]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/debian-8/Dockerfile
@@ -121,6 +123,16 @@ Now, you can play the Ansible on Jupyter.
 You can see more detail at [怎麼用 Jupyter 操控 Ansible？(localhost) | 現代 IT 人一定要知道的 Ansible 自動化組態技巧](https://chusiang.gitbooks.io/automate-with-ansible/07.how-to-practive-the-ansible-with-jupyter1.html) .
 
 Enjoy it !
+
+## History
+
+### 2018
+
+* 01/10 Stop automated build images of `centos-6`, `debian-7` and `alpine-3.4_ansible-2.1`.
+
+### 2017
+
+* ??/?? Stop automated build images of `gentoo`, `opensuse-42.1` and `alpine-3.4`.
 
 ## License
 

@@ -10,12 +10,12 @@ A Docker image for run [Ansible][ansible_official] 2.4.1 on [Jupyter Notebook][j
 ## Supported tags and respective `Dockerfile` links
 
 - `alpine-3.4` [*(alpine-3.4/Dockerfile)*][dockerfile_alpine-3.4]
-- `alpine-3.4_ansible-2.1` [*(alpine-3.4_ansible-2.1/Dockerfile)*][dockerfile_alpine-3.4_ansible-2.1]
+- ~~`alpine-3.4_ansible-2.1`~~ [*(alpine-3.4_ansible-2.1/Dockerfile)*][dockerfile_alpine-3.4_ansible-2.1]
 - `alpine-3.6`, `latest` [*(alpine-3.6/Dockerfile)*][dockerfile_alpine-3.6]
 - `alpine-3.6_ansible-2.3` [*(alpine-3.6_ansible-2.3/Dockerfile)*][dockerfile_alpine-3.6_ansible-2.3]
 - `archlinux` [*(archlinux/Dockerfile)*][dockerfile_archlinux]
 - `centos-7` [*(centos-7/Dockerfile)*][dockerfile_centos-7]
-- `debian-7` [*(debian-7/Dockerfile)*][dockerfile_debian-7]
+- ~~`debian-7`~~ [*(debian-7/Dockerfile)*][dockerfile_debian-7]
 - `debian-8` [*(debian-8/Dockerfile)*][dockerfile_debian-8]
 - `debian-9` [*(debian-9/Dockerfile)*][dockerfile_debian-9]
 - ~~`gentoo`~~ [*(gentoo/Dockerfile)*][dockerfile_gentoo]
@@ -124,4 +124,4 @@ Enjoy it !
 
 ## License
 
-Copyright (c) chusiang from 2016-2017 under the MIT license.
+Copyright (c) chusiang from 2016-2018 under the MIT license.

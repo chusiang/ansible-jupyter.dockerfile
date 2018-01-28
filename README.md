@@ -2,7 +2,7 @@
 
 [![Docker Hub](https://img.shields.io/badge/docker-ansible--jupyter-blue.svg)](https://hub.docker.com/r/chusiang/ansible-jupyter/) [![microbadger](https://images.microbadger.com/badges/image/chusiang/ansible-jupyter.svg)](https://microbadger.com/images/chusiang/ansible-jupyter "Get your own image badge on microbadger.com")
 
-A Docker image for run [Ansible][ansible_official] 2.4.1 on [Jupyter Notebook][jupyter_official] 4.4.0 (ipython notebook) with Browsers.
+A Docker image for run [Ansible][ansible_official] 2.4.2 on [Jupyter Notebook][jupyter_official] 4.4.0 (ipython notebook) with Browsers.
 
 [ansible_official]:  https://www.ansible.com/
 [jupyter_official]: http://jupyter.org/
@@ -109,20 +109,19 @@ Now, you can play the Ansible on Jupyter.
     
     ![2016-11-20-ansible-jupyter1]
 
-[2016-11-20-ansible-jupyter1]: https://cloud.githubusercontent.com/assets/219066/20463322/218f0c4a-af6b-11e6-9a95-2411ec7acb5f.png
-
 1. Attach my example ==> [`ansible_on_jupyter.ipynb`][ansible_on_jupyter.ipynb].
 
     ![2016-11-20-ansible-jupyter2]
-
-[ansible_on_jupyter.ipynb]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/ipynb/ansible_on_jupyter.ipynb
-[2016-11-20-ansible-jupyter2]: https://cloud.githubusercontent.com/assets/219066/20463319/fa8c047c-af6a-11e6-96d6-f985096c9c8c.png
 
 1. Remember use the `!` prefix to trigger system command.
 
 You can see more detail at [怎麼用 Jupyter 操控 Ansible？(localhost) | 現代 IT 人一定要知道的 Ansible 自動化組態技巧](https://chusiang.gitbooks.io/automate-with-ansible/07.how-to-practive-the-ansible-with-jupyter1.html) .
 
 Enjoy it !
+
+[ansible_on_jupyter.ipynb]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/ipynb/ansible_on_jupyter.ipynb
+[2016-11-20-ansible-jupyter1]: https://cloud.githubusercontent.com/assets/219066/20463322/218f0c4a-af6b-11e6-9a95-2411ec7acb5f.png
+[2016-11-20-ansible-jupyter2]: https://cloud.githubusercontent.com/assets/219066/20463319/fa8c047c-af6a-11e6-96d6-f985096c9c8c.png
 
 ## History
 

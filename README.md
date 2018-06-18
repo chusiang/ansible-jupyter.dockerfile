@@ -2,17 +2,18 @@
 
 [![Docker Hub](https://img.shields.io/badge/docker-ansible--jupyter-blue.svg)](https://hub.docker.com/r/chusiang/ansible-jupyter/) [![microbadger](https://images.microbadger.com/badges/image/chusiang/ansible-jupyter.svg)](https://microbadger.com/images/chusiang/ansible-jupyter "Get your own image badge on microbadger.com")
 
-A Docker image for run [Ansible][ansible_official] 2.4.2 on [Jupyter Notebook][jupyter_official] 4.4.0 (ipython notebook) with Browsers.
+A Docker image for run [Ansible][ansible_official] 2.5 on [Jupyter Notebook][jupyter_official] 4.4.0 (ipython notebook) with Browsers.
 
-[ansible_official]:  https://www.ansible.com/
+[ansible_official]: https://www.ansible.com/
 [jupyter_official]: http://jupyter.org/
 
 ## Supported tags and respective `Dockerfile` links
 
 - `alpine-3.4` [*(alpine-3.4/Dockerfile)*][dockerfile_alpine-3.4]
 - ~~`alpine-3.4_ansible-2.1`~~ [*(alpine-3.4_ansible-2.1/Dockerfile)*][dockerfile_alpine-3.4_ansible-2.1]
-- `alpine-3.6`, `latest` [*(alpine-3.6/Dockerfile)*][dockerfile_alpine-3.6]
+- `alpine-3.6` [*(alpine-3.6/Dockerfile)*][dockerfile_alpine-3.6]
 - `alpine-3.6_ansible-2.3` [*(alpine-3.6_ansible-2.3/Dockerfile)*][dockerfile_alpine-3.6_ansible-2.3]
+- `alpine-3.7`, `latest` [*(alpine-3.7/Dockerfile)*][dockerfile_alpine-3.7]
 - `archlinux` [*(archlinux/Dockerfile)*][dockerfile_archlinux]
 - ~~`centos-6`~~ [*(centos-6/Dockerfile)*][dockerfile_centos-6]
 - `centos-7` [*(centos-7/Dockerfile)*][dockerfile_centos-7]
@@ -30,6 +31,7 @@ A Docker image for run [Ansible][ansible_official] 2.4.2 on [Jupyter Notebook][j
 [dockerfile_alpine-3.4_ansible-2.1]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.4_ansible-2.1/Dockerfile
 [dockerfile_alpine-3.6]:    https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.6/Dockerfile
 [dockerfile_alpine-3.6_ansible-2.3]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.6_ansible-2.3/Dockerfile
+[dockerfile_alpine-3.7]:    https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.7/Dockerfile
 [dockerfile_archlinux]:     https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/archlinux/Dockerfile
 [dockerfile_centos-6]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/centos-6/Dockerfile
 [dockerfile_centos-7]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/centos-7/Dockerfile
@@ -66,13 +68,13 @@ A Docker image for run [Ansible][ansible_official] 2.4.2 on [Jupyter Notebook][j
 ## Run container
 
 1. Get image.
-    
+
     ```
     $ docker pull chusiang/ansible-jupyter
     ```
 
 1. Run the container with daemon mode.
-    
+
     ```
     $ docker run --name ansible-jupyter -P -d chusiang/ansible-jupyter
     be8a15b9d4da5d24610c1fc738cb13086f01101e90f94640360d8d84892de772
@@ -92,7 +94,7 @@ A Docker image for run [Ansible][ansible_official] 2.4.2 on [Jupyter Notebook][j
     $ docker exec -it ansible-jupyter sh
     / #
     ```
-    
+
 ## Play Ansible on Jupyter
 
 Now, you can play the Ansible on Jupyter.
@@ -102,11 +104,11 @@ Now, you can play the Ansible on Jupyter.
     ```
     # GNU/Linux
     $ firefox http://localhost:32786
-    
+
     # macOS
     $ open http://localhost:32786
     ```
-    
+
     ![2016-11-20-ansible-jupyter1]
 
 1. Attach my example ==> [`ansible_on_jupyter.ipynb`][ansible_on_jupyter.ipynb].
@@ -127,6 +129,7 @@ Enjoy it !
 
 ### 2018
 
+* 06/18 Add images of `alpine-3.7`.
 * 01/10 Stop automated build images of `centos-6`, `debian-7` and `alpine-3.4_ansible-2.1`.
 
 ### 2017

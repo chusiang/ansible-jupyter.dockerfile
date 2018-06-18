@@ -24,8 +24,9 @@ A Docker image for run [Ansible][ansible_official] 2.5 on [Jupyter Notebook][jup
 - ~~`opensuse-42.1`~~ [*(opensuse-42.1/Dockerfile)*][dockerfile_opensuse-42.1]
 - `opensuse-42.2` [*(opensuse-42.2/Dockerfile)*][dockerfile_opensuse-42.2]
 - `opensuse-42.3` [*(opensuse-42.3/Dockerfile)*][dockerfile_opensuse-42.3]
-- `ubuntu-14.04` [*(ubuntu-14.04/Dockerfile)*][dockerfile_ubuntu-14.04]
+- ~~`ubuntu-14.04`~~ [*(ubuntu-14.04/Dockerfile)*][dockerfile_ubuntu-14.04]
 - `ubuntu-16.04` [*(ubuntu-16.04/Dockerfile)*][dockerfile_ubuntu-16.04]
+- `ubuntu-18.04` [*(ubuntu-18.04/Dockerfile)*][dockerfile_ubuntu-18.04]
 
 [dockerfile_alpine-3.4]:    https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.4/Dockerfile
 [dockerfile_alpine-3.4_ansible-2.1]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.4_ansible-2.1/Dockerfile
@@ -44,6 +45,7 @@ A Docker image for run [Ansible][ansible_official] 2.5 on [Jupyter Notebook][jup
 [dockerfile_opensuse-42.3]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/opensuse-42.3/Dockerfile
 [dockerfile_ubuntu-14.04]:  https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/ubuntu-14.04/Dockerfile
 [dockerfile_ubuntu-16.04]:  https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/ubuntu-16.04/Dockerfile
+[dockerfile_ubuntu-18.04]:  https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/ubuntu-18.04/Dockerfile
 
 ## Build image
 
@@ -129,7 +131,7 @@ Enjoy it !
 
 ### 2018
 
-* 06/18 Add images of `alpine-3.7`.
+* 06/18 Add new images of `alpine-3.7`, `ubuntu-18.04`. Stop automated build image of `ubuntu-14.04`.
 * 01/10 Stop automated build images of `centos-6`, `debian-7` and `alpine-3.4_ansible-2.1`.
 
 ### 2017

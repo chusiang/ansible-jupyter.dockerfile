@@ -9,11 +9,12 @@ A Docker image for run [Ansible][ansible_official] 2.5 on [Jupyter Notebook][jup
 
 ## Supported tags and respective `Dockerfile` links
 
-- `alpine-3.4` [*(alpine-3.4/Dockerfile)*][dockerfile_alpine-3.4]
+- ~~`alpine-3.4`~~ [*(alpine-3.4/Dockerfile)*][dockerfile_alpine-3.4]
 - ~~`alpine-3.4_ansible-2.1`~~ [*(alpine-3.4_ansible-2.1/Dockerfile)*][dockerfile_alpine-3.4_ansible-2.1]
-- `alpine-3.6` [*(alpine-3.6/Dockerfile)*][dockerfile_alpine-3.6]
-- `alpine-3.6_ansible-2.3` [*(alpine-3.6_ansible-2.3/Dockerfile)*][dockerfile_alpine-3.6_ansible-2.3]
-- `alpine-3.7`, `latest` [*(alpine-3.7/Dockerfile)*][dockerfile_alpine-3.7]
+- ~~`alpine-3.6`~~ [*(alpine-3.6/Dockerfile)*][dockerfile_alpine-3.6]
+- ~~`alpine-3.6_ansible-2.3`~~ [*(alpine-3.6_ansible-2.3/Dockerfile)*][dockerfile_alpine-3.6_ansible-2.3]
+- `alpine-3.7` [*(alpine-3.7/Dockerfile)*][dockerfile_alpine-3.7]
+- `alpine-3.8`, `latest` [*(alpine-3.8/Dockerfile)*][dockerfile_alpine-3.8]
 - `archlinux` [*(archlinux/Dockerfile)*][dockerfile_archlinux]
 - ~~`centos-6`~~ [*(centos-6/Dockerfile)*][dockerfile_centos-6]
 - `centos-7` [*(centos-7/Dockerfile)*][dockerfile_centos-7]
@@ -22,7 +23,7 @@ A Docker image for run [Ansible][ansible_official] 2.5 on [Jupyter Notebook][jup
 - `debian-9` [*(debian-9/Dockerfile)*][dockerfile_debian-9]
 - ~~`gentoo`~~ [*(gentoo/Dockerfile)*][dockerfile_gentoo]
 - ~~`opensuse-42.1`~~ [*(opensuse-42.1/Dockerfile)*][dockerfile_opensuse-42.1]
-- `opensuse-42.2` [*(opensuse-42.2/Dockerfile)*][dockerfile_opensuse-42.2]
+- ~~`opensuse-42.2`~~ [*(opensuse-42.2/Dockerfile)*][dockerfile_opensuse-42.2]
 - `opensuse-42.3` [*(opensuse-42.3/Dockerfile)*][dockerfile_opensuse-42.3]
 - ~~`ubuntu-14.04`~~ [*(ubuntu-14.04/Dockerfile)*][dockerfile_ubuntu-14.04]
 - `ubuntu-16.04` [*(ubuntu-16.04/Dockerfile)*][dockerfile_ubuntu-16.04]
@@ -33,6 +34,7 @@ A Docker image for run [Ansible][ansible_official] 2.5 on [Jupyter Notebook][jup
 [dockerfile_alpine-3.6]:    https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.6/Dockerfile
 [dockerfile_alpine-3.6_ansible-2.3]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.6_ansible-2.3/Dockerfile
 [dockerfile_alpine-3.7]:    https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.7/Dockerfile
+[dockerfile_alpine-3.8]:    https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.8/Dockerfile
 [dockerfile_archlinux]:     https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/archlinux/Dockerfile
 [dockerfile_centos-6]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/centos-6/Dockerfile
 [dockerfile_centos-7]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/centos-7/Dockerfile
@@ -131,6 +133,7 @@ Enjoy it !
 
 ### 2018
 
+* 07/11 Add new images of `alpine-3.8`. Stop automated build image of `alpine-3.4`, `alpine-3.6` and `opensuse-42.2`.
 * 06/18 Add new images of `alpine-3.7`, `ubuntu-18.04`. Stop automated build image of `ubuntu-14.04`.
 * 01/10 Stop automated build images of `centos-6`, `debian-7` and `alpine-3.4_ansible-2.1`.
 

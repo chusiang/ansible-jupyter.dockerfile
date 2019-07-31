@@ -2,27 +2,26 @@ version: '2'
 services:
 
   control-machine:
+    image: chusiang/ansible-jupyter:alpine-3.6
     ports:
       - 8888:8888/tcp
-    image: chusiang/ansible-jupyter:alpine-3.6
-  
+
   managed-node-ubuntu:
+    image: chusiang/ansible-managed-node:ubuntu-16.04
     ports:
       - 2221:22/tcp
-    image: chusiang/ansible-managed-node:ubuntu-16.04
-  
+
   managed-node-debian:
+    image: chusiang/ansible-managed-node:debian-9
     ports:
       - 2222:22/tcp
-    image: chusiang/ansible-managed-node:debian-9
-  
+
   managed-node-centos:
+    image: chusiang/ansible-managed-node:centos-7
     ports:
       - 2223:22/tcp
-    image: chusiang/ansible-managed-node:centos-7
 
   managed-node-alpine:
+    image: chusiang/ansible-managed-node:alpine-3.6
     ports:
       - 2224:22/tcp
-    image: chusiang/ansible-managed-node:alpine-3.6
-  

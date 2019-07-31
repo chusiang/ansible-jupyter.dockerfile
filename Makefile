@@ -1,14 +1,31 @@
-# ============================================================
+# =============================================================================
 #  Author: Chu-Siang Lai / chusiang (at) drx.tw
 #  Blog: http://note.drx.tw
 #  Filename: Makefile
-#  Modified: 2016-11-30 12:51
+#  Modified: 2019-08-01 00:13
 #  Description: Do something with make.
-# =========================================================== 
+# =============================================================================
 
-.PHONY: main pull run start stop clean retag_latest
+.PHONY: main check syntax_check lint_check yaml_check	\
+	pull run start stop retag_latest		\
+	clean
 
-main: run
+main: check
+
+# - Check ---------------------------------------------------------------------
+
+check: syntax_check lint_check yaml_check
+
+syntax_check:
+	ansible-playbook --syntax-check setup*.yml
+
+lint_check:
+	ansible-lint setup*.yml
+
+yaml_check:
+	find -name "*.yml" -type f -exec yamllint -c .yamllint.yaml {} \;
+
+# - Docker --------------------------------------------------------------------
 
 # Only download the docker image.
 pull:
@@ -30,11 +47,12 @@ start:
 stop:
 	docker-compose stop
 
-# Remove containers.
-clean:
-	docker-compose rm -f
-
 # Retag and push the latest tag.
 retag_latest:
 	-sh bin/retag_latest.sh
 
+# - Clean ---------------------------------------------------------------------
+
+clean:
+	# Remove containers.
+	docker-compose rm -f

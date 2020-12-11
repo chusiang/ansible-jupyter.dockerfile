@@ -2,7 +2,7 @@
 
 [![Docker Hub](https://img.shields.io/badge/docker-ansible--jupyter-blue.svg)](https://hub.docker.com/r/chusiang/ansible-jupyter/) [![microbadger](https://images.microbadger.com/badges/image/chusiang/ansible-jupyter.svg)](https://microbadger.com/images/chusiang/ansible-jupyter "Get your own image badge on microbadger.com")
 
-A Docker image for run [Ansible][ansible_official] 2.5 on [Jupyter Notebook][jupyter_official] 4.4.0 (ipython notebook) with Browsers.
+A Docker image for run [Ansible][ansible_official] 2.x on [Jupyter Notebook][jupyter_official] 4.x (ipython notebook) with Browsers.
 
 [ansible_official]: https://www.ansible.com/
 [jupyter_official]: http://jupyter.org/
@@ -11,32 +11,18 @@ A Docker image for run [Ansible][ansible_official] 2.5 on [Jupyter Notebook][jup
 
 - `alpine-3`, `latest` [*(alpine-3/Dockerfile)*][dockerfile_alpine-3]
 - `archlinux` [*(archlinux/Dockerfile)*][dockerfile_archlinux]
-- ~~`centos-6`~~ [*(centos-6/Dockerfile)*][dockerfile_centos-6]
 - `centos-7` [*(centos-7/Dockerfile)*][dockerfile_centos-7]
-- ~~`debian-7`~~ [*(debian-7/Dockerfile)*][dockerfile_debian-7]
-- `debian-8` [*(debian-8/Dockerfile)*][dockerfile_debian-8]
 - `debian-9` [*(debian-9/Dockerfile)*][dockerfile_debian-9]
 - ~~`gentoo`~~ [*(gentoo/Dockerfile)*][dockerfile_gentoo]
-- ~~`opensuse-42.1`~~ [*(opensuse-42.1/Dockerfile)*][dockerfile_opensuse-42.1]
-- ~~`opensuse-42.2`~~ [*(opensuse-42.2/Dockerfile)*][dockerfile_opensuse-42.2]
 - `opensuse-42.3` [*(opensuse-42.3/Dockerfile)*][dockerfile_opensuse-42.3]
-- ~~`ubuntu-14.04`~~ [*(ubuntu-14.04/Dockerfile)*][dockerfile_ubuntu-14.04]
-- `ubuntu-16.04` [*(ubuntu-16.04/Dockerfile)*][dockerfile_ubuntu-16.04]
 - `ubuntu-18.04` [*(ubuntu-18.04/Dockerfile)*][dockerfile_ubuntu-18.04]
 
 [dockerfile_alpine-3]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3/Dockerfile
 [dockerfile_archlinux]:     https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/archlinux/Dockerfile
-[dockerfile_centos-6]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/centos-6/Dockerfile
 [dockerfile_centos-7]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/centos-7/Dockerfile
-[dockerfile_debian-7]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/debian-7/Dockerfile
-[dockerfile_debian-8]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/debian-8/Dockerfile
 [dockerfile_debian-9]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/debian-9/Dockerfile
 [dockerfile_gentoo]:        https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/gentoo/Dockerfile
-[dockerfile_opensuse-42.1]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/opensuse-42.1/Dockerfile
-[dockerfile_opensuse-42.2]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/opensuse-42.2/Dockerfile
 [dockerfile_opensuse-42.3]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/opensuse-42.3/Dockerfile
-[dockerfile_ubuntu-14.04]:  https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/ubuntu-14.04/Dockerfile
-[dockerfile_ubuntu-16.04]:  https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/ubuntu-16.04/Dockerfile
 [dockerfile_ubuntu-18.04]:  https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/ubuntu-18.04/Dockerfile
 
 ## Build image
@@ -123,7 +109,7 @@ Enjoy it !
 
 ### 2020
 
-* 12/12 Fixed Python 3 dependency problem on Alpine Linux v3.12.
+* 12/12 Fixed Python 3 dependency problem on Alpine Linux v3.12, and stop support some EOL images.
 
 ### 2018
 
@@ -137,4 +123,4 @@ Enjoy it !
 
 ## License
 
-Copyright (c) chusiang from 2016-2018 under the MIT license.
+Copyright (c) chusiang from 2016-2020 under the MIT license.

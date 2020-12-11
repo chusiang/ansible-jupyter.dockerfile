@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:3
 
 MAINTAINER Chu-Siang Lai <chusiang@drx.tw>
 
@@ -6,14 +6,14 @@ MAINTAINER Chu-Siang Lai <chusiang@drx.tw>
 RUN apk update
 
 # Install the requires apk package and python.
-RUN apk add --no-cache linux-headers gcc build-base python py-pip python-dev \
-        libffi-dev openssl-dev ca-certificates
+RUN apk add --no-cache linux-headers gcc build-base python3 py-pip python3-dev \
+        libffi-dev openssl-dev ca-certificates py3-pyzmq
 
 # Upgrade the pip to lastest.
-RUN pip install -U pip
+RUN pip3 install -U pip
 
 # Setup the ansible.
-RUN pip install ansible
+RUN pip3 install ansible
 
 # for disable localhost warning message.
 RUN mkdir /etc/ansible && \

@@ -9,12 +9,7 @@ A Docker image for run [Ansible][ansible_official] 2.5 on [Jupyter Notebook][jup
 
 ## Supported tags and respective `Dockerfile` links
 
-- ~~`alpine-3.4`~~ [*(alpine-3.4/Dockerfile)*][dockerfile_alpine-3.4]
-- ~~`alpine-3.4_ansible-2.1`~~ [*(alpine-3.4_ansible-2.1/Dockerfile)*][dockerfile_alpine-3.4_ansible-2.1]
-- ~~`alpine-3.6`~~ [*(alpine-3.6/Dockerfile)*][dockerfile_alpine-3.6]
-- ~~`alpine-3.6_ansible-2.3`~~ [*(alpine-3.6_ansible-2.3/Dockerfile)*][dockerfile_alpine-3.6_ansible-2.3]
-- `alpine-3.7` [*(alpine-3.7/Dockerfile)*][dockerfile_alpine-3.7]
-- `alpine-3.8`, `latest` [*(alpine-3.8/Dockerfile)*][dockerfile_alpine-3.8]
+- `alpine-3`, `latest` [*(alpine-3/Dockerfile)*][dockerfile_alpine-3]
 - `archlinux` [*(archlinux/Dockerfile)*][dockerfile_archlinux]
 - ~~`centos-6`~~ [*(centos-6/Dockerfile)*][dockerfile_centos-6]
 - `centos-7` [*(centos-7/Dockerfile)*][dockerfile_centos-7]
@@ -29,12 +24,7 @@ A Docker image for run [Ansible][ansible_official] 2.5 on [Jupyter Notebook][jup
 - `ubuntu-16.04` [*(ubuntu-16.04/Dockerfile)*][dockerfile_ubuntu-16.04]
 - `ubuntu-18.04` [*(ubuntu-18.04/Dockerfile)*][dockerfile_ubuntu-18.04]
 
-[dockerfile_alpine-3.4]:    https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.4/Dockerfile
-[dockerfile_alpine-3.4_ansible-2.1]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.4_ansible-2.1/Dockerfile
-[dockerfile_alpine-3.6]:    https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.6/Dockerfile
-[dockerfile_alpine-3.6_ansible-2.3]: https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.6_ansible-2.3/Dockerfile
-[dockerfile_alpine-3.7]:    https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.7/Dockerfile
-[dockerfile_alpine-3.8]:    https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3.8/Dockerfile
+[dockerfile_alpine-3]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/alpine-3/Dockerfile
 [dockerfile_archlinux]:     https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/archlinux/Dockerfile
 [dockerfile_centos-6]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/centos-6/Dockerfile
 [dockerfile_centos-7]:      https://github.com/chusiang/ansible-jupyter.dockerfile/blob/master/centos-7/Dockerfile
@@ -130,6 +120,10 @@ Enjoy it !
 [2016-11-20-ansible-jupyter2]: https://cloud.githubusercontent.com/assets/219066/20463319/fa8c047c-af6a-11e6-96d6-f985096c9c8c.png
 
 ## History
+
+### 2020
+
+* 12/12 Fixed Python 3 dependency problem on Alpine Linux v3.12.
 
 ### 2018
 
